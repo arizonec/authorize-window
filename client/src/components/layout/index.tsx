@@ -6,7 +6,7 @@ import { Header } from '../header';
 type Props = {
     children: ReactNode;
 }
-
+//Проверить, можно ли использовать Outlet?
 export const Layout: FC<Props> = ({ children }) => {
     return (
         <div className={styles.main}>
@@ -14,7 +14,7 @@ export const Layout: FC<Props> = ({ children }) => {
             <AntdLayout.Content style={{
                 height: '100%'
             }}>
-                {children} //Проверить, можно ли использовать Outlet?
+                {children}
             </AntdLayout.Content>
         </div>
     )
