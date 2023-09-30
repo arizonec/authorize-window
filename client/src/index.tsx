@@ -10,11 +10,16 @@ import { Register } from './pages/register';
 import { Paths } from './paths';
 import './index.css';
 import { Auth } from './features/auth/auth';
+import { Employees } from './pages/employees';
+import { AddEmployee } from './pages/add-employee';
+import { Status } from './pages/status';
+import { Employee } from './pages/employee';
+import { EditEmployee } from './pages/edit-employee';
 
 const router = createBrowserRouter([ //Проверить, это то же самое что и Routes, как в реакт пицца или нет?
     {
         path: Paths.home,
-        element: <h1>Home</h1>
+        element: <Employees />
     },
     {
         path: Paths.login,
@@ -23,6 +28,22 @@ const router = createBrowserRouter([ //Проверить, это то же са
     {
         path: Paths.register,
         element: <Register />
+    },
+    {
+        path: Paths.employeeAdd,
+        element: <AddEmployee />
+    },
+    {
+        path: `${Paths.status}/:status`,
+        element: <Status />
+    },
+    {
+        path: `${Paths.employee}/:id`,
+        element: <Employee />
+    },
+    {
+        path: `${Paths.employeeEdit}/:id`,
+        element: <EditEmployee />
     }
 ]);
 
